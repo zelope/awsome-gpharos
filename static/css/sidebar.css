@@ -1,0 +1,18 @@
+/* 사이드바 스타일 */
+#sidebar {
+    height: 100vh;
+    background-color: #2b3e50; /* 어두운 블루톤 배경 */
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+#sidebar .nav-link {
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+#sidebar .nav-link:hover {
+    background-color: #3e5675; /* 밝은 블루톤으로 변경 */
+}

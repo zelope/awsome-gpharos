@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+    
+   
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/place.css' %}">
+</head>
+<body>
+    <div class="fireworks"></div>
+    <div class="content">
+        <header>
+            <div class="header-container">
+                <a href="{% url 'hot-place' %}" class="home-link">
+                    <i class="fa-solid fa-house"></i>
+                    <div>go back</div>
+                </a>
+            </div>
+        </header>
+        <section>
+            <div class="detail-container">
+                <div class="detail-image">
+                    <div class="image">
+                        {{img_path|safe}}
+                    </div>
+                </div>
+                <div class="detail-info">
+                    <p class="title">{{ festival.festival_name  }}</p>
+                    <p><i class="fa-solid fa-road"></i> <strong>거리:</strong> {{ festival.distance  }} m</p>
+                    <p><i class="fa-solid fa-tag"></i> <strong>종류:</strong> {{ festival.tag  }}</p>
+                    <p><i class="fa-solid fa-location-dot"></i> <strong>상세 주소:</strong> {{ festival.location }}</p>
+                    <p> <i class="fa-solid fa-book"></i><strong> 블로그:</strong> <a href= {{ festival.blog1.link }} >{{festival.blog1.title}}</a></p>
+                    {% if festival.blog2%}
+                    <p><i class="fa-solid fa-book"></i><strong> 블로그:</strong> <a href= {{ festival.blog2.link }} >{{festival.blog2.title}}</a></p>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    {% load static %}
+    <script type="text/javascript" src="{% static 'js/hotplace.js' %}"></script> <!-- JS 파일 포함 -->
+    <script src="https://kit.fontawesome.com/c4ee9e0091.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -26,7 +26,8 @@ pip install -r requirements.txt
 
 ## 1-2. setting file
 ### step1
-내가 보낸 파일을 config 폴더 안에 넣기
+settings.py는  config 폴더 안에 넣고
+.config는 manage.py랑 같은 계층에 두기
 
 ### step2
 ```powershell
@@ -39,6 +40,10 @@ python manage.py migrate
 ```
 
 ## 1-3. (로컬에서) 실행
+### step1
 ```powershell
 python manage.py runserver    
 ```
+
+### step2 : 신호 전송 및 hotplace 화면 실행
+카톡 주세요 ! (데이터 I/O 마다 비용이 들어서 평소에는 꺼둠....)
