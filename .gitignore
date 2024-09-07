@@ -1,5 +1,0 @@
-.venv
-.config
-__pycache__/
-config/settings.py
-migrations
